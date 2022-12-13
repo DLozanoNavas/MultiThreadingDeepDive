@@ -1,9 +1,10 @@
-﻿new Thread(PrintNumbers)
+﻿// Threads share Heap Memory, even though they have isolated stack memory.
+Thread.CurrentThread.Name = "Main Thread";
+
+new Thread(PrintNumbers)
 {
     Name = "Worker Thread" // Naming threads (handy for debugging.)
 }.Start(); // Worker Thread
-
-Thread.CurrentThread.Name = "Main Thread";
 
 PrintNumbers();
 
