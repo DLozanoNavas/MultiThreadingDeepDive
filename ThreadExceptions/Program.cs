@@ -9,7 +9,7 @@ void Demo()
     {
         new Thread(Execute)
         {
-            Name = "Worker Thread"
+            Name = "Worker Thread 1"
         }.Start();
     }
     catch (Exception e)
@@ -28,9 +28,8 @@ void Demo2()
 
     new Thread(Execute2)
     {
-        Name = "Worker Thread"
+        Name = "Worker Thread 2"
     }.Start();
-
 }
 
 void Execute2()
