@@ -1,5 +1,8 @@
-﻿################################################################################
-# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
-################################################################################
-
+.DS_Store
+node_modules
+.tmp
+npm-debug.log
+bin/
+obj/
+/.vs/AdvancedLanguageFeatures
 /.vs/MultiThreading
