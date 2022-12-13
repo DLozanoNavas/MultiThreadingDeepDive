@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedResources", "SharedRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalMemory", "LocalMemory\LocalMemory.csproj", "{50DD7025-0B6B-4074-8879-C543CCA7E524}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool", "ThreadPool\ThreadPool.csproj", "{497C168F-7CFF-49FA-8483-F86B294CE0CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{50DD7025-0B6B-4074-8879-C543CCA7E524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50DD7025-0B6B-4074-8879-C543CCA7E524}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50DD7025-0B6B-4074-8879-C543CCA7E524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497C168F-7CFF-49FA-8483-F86B294CE0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497C168F-7CFF-49FA-8483-F86B294CE0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497C168F-7CFF-49FA-8483-F86B294CE0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497C168F-7CFF-49FA-8483-F86B294CE0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
