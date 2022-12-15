@@ -3,7 +3,7 @@
 // - Reader/Writer locks allow only one thread to write to a resource at a time.
 // - Reader/Writer locks are also known as shared/exclusive locks.
 
-// ReaderWriterLockSlim is a new class in .NET 4.0 that provides a reader/writer lock.
+// ReaderWriterLockSlim is a class introduced in .NET Framework 4.0 that provides a reader/writer lock.
 // - It is a lightweight version of the ReaderWriterLock class.
 // - It is a value type and does not require the use of the using statement.
 // - It is a good choice for most scenarios.
