@@ -1,0 +1,41 @@
+﻿// Reader/Writer locks slim
+// - Reader/Writer locks allow multiple threads to read a resource at the same time.
+// - Reader/Writer locks allow only one thread to write to a resource at a time.
+// - Reader/Writer locks are also known as shared/exclusive locks.
+namespace ReaderWriterLock;
+
+static class Program
+{
+    static ReaderWriterLockSlim readerWriterLockSlim = new ();
+
+    static void Main(string[] args)
+    {
+        var tasks = new List<Task>();
+
+        for (var i = 0; i < 10; i++)
+        {
+            tasks.Add(Task.Factory.StartNew(() =>
+            {
+                readerWriterLockSlim.EnterReadLock();
+                Console.WriteLine($"Read lock acquired by task {Task.CurrentId}");
+                Thread.Sleep(1000);
+                readerWriterLockSlim.ExitReadLock();
+            }));
+        }
+
+        for (var i = 0; i < 10; i++)
+        {
+            tasks.Add(Task.Factory.StartNew(() =>
+            {
+                readerWriterLockSlim.EnterWriteLock();
+                Console.WriteLine($"Write lock acquired {Task.CurrentId}");
+                Thread.Sleep(1000);
+                readerWriterLockSlim.ExitWriteLock();
+            }));
+        }
+
+        Task.WaitAll(tasks.ToArray());
+
+        Console.ReadLine();
+    }
+}
