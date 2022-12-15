@@ -22,7 +22,7 @@ class Program
         try
         {
             var exitContext = true;
-            if (mutex.WaitOne(1000, exitContext))
+            if (mutex.WaitOne(1000, exitContext)) // If the current thread cant acquire the mutex in 1 second, it won´t wait anymore
             {
                 Console.WriteLine($"[V2] Mutex acquired by thread {Thread.CurrentThread.Name}");
                 Thread.Sleep(500);
