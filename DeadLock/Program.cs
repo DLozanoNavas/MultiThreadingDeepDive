@@ -11,11 +11,11 @@ void FirstMethod()
 {
     lock (firstLock)
     {
-        Console.WriteLine("First thread acquired first lock");
+        Console.WriteLine($"{Thread.CurrentThread.Name} acquired first lock");
         Thread.Sleep(1000);
         lock (secondLock)
         {
-            Console.WriteLine("First thread acquired second lock");
+            Console.WriteLine($"{Thread.CurrentThread.Name} acquired second lock");
         }
     }
 }
@@ -25,11 +25,11 @@ void SecondMethod()
 {
     lock (secondLock)
     {
-        Console.WriteLine("Second thread acquired second lock");
+        Console.WriteLine($"{Thread.CurrentThread.Name} acquired second lock");
         Thread.Sleep(1000);
         lock (firstLock)
         {
-            Console.WriteLine("Second thread acquired first lock");
+            Console.WriteLine($"{Thread.CurrentThread.Name} acquired first lock");
         }
     }
 }
