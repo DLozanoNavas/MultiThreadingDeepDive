@@ -34,7 +34,7 @@ static class Program
             tasks.Add(Task.Factory.StartNew(() =>
             {
                 readerWriterLockSlim.EnterWriteLock();
-                Console.WriteLine($"Write lock acquired {Task.CurrentId}");
+                Console.WriteLine($"Write lock acquired by task {Task.CurrentId}");
                 Thread.Sleep(1000);
                 readerWriterLockSlim.ExitWriteLock();
             }));
