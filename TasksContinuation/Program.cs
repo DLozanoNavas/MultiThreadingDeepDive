@@ -9,14 +9,16 @@
 
 var antecedent = Task.Factory.StartNew(() =>
 {
-    Task.Delay(2000);
+    Task.Delay(5000);
     return DateTime.Today.ToShortDateString();
 });
 
 var continuation = antecedent.ContinueWith(t =>
 {
-    Task.Delay(1000);
+    Task.Delay(5000);
     return $"Today is {t.Result}";
 });
+
+//Console.WriteLine("This will be printed before the result of the continuation");
 
 Console.WriteLine(continuation.Result);
